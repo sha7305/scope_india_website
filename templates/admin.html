@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container my-5">
+    <h2 class="text-white mb-4">All Registrations</h2>
+    <div class="table-responsive">
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th><th>Name</th><th>Email</th><th>Mobile</th><th>Course</th><th>Location</th><th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for reg in registrations %}
+                <tr>
+                    <td>{{ reg.id }}</td>
+                    <td>{{ reg.full_name }}</td>
+                    <td>{{ reg.email }}</td>
+                    <td>{{ reg.mobile_number }}</td>
+                    <td>{{ reg.course }}</td>
+                    <td>{{ reg.location }}</td>
+                    <td>{{ reg.created_at }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

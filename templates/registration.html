@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-header">
+    <div class="container text-center">
+        <h1 class="page-title">Course Registration at SCOPE INDIA</h1>
+        <p class="page-subtitle">Center for Software, Networking, & Cloud Education</p>
+        <p class="page-text">One of India's best Training destinations for Software, Networking, DevOps and Cloud Computing courses with 18 years of Industrial experience. Over 1,000 students find their dream careers each year, and we have assisted more than 15,000 students so far.</p>
+    </div>
+</div>
+
+<section class="registration-section">
+    <div class="container">
+        <form method="POST" class="registration-form">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <label class="form-label-custom">Full Name (required)</label>
+                    <input type="text" class="form-control-custom" name="full_name" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label-custom">Date of Birth (required)</label>
+                    <input type="date" class="form-control-custom" name="date_of_birth" placeholder="dd-mm-yyyy" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label-custom">Gender (required)</label>
+                    <div class="radio-group">
+                        <label class="radio-label"><input type="radio" name="gender" value="Male" required> Male</label>
+                        <label class="radio-label"><input type="radio" name="gender" value="Female" required> Female</label>
+                        <label class="radio-label"><input type="radio" name="gender" value="Other" required> Other</label>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label-custom">Educational Qualification</label>
+                    <input type="text" class="form-control-custom" name="educational_qualification">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label-custom">Mobile Number (required)</label>
+                    <input type="tel" class="form-control-custom" name="mobile_number" pattern="[0-9]{10}" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label-custom">Email (required)</label>
+                    <input type="email" class="form-control-custom" name="email" required>
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label-custom">Guardian's Name</label>
+                    <input type="text" class="form-control-custom" name="guardian_name">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label-custom">Guardian's Occupation</label>
+                    <input type="text" class="form-control-custom" name="guardian_occupation">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label-custom">Guardian's Mobile</label>
+                    <input type="tel" class="form-control-custom" name="guardian_mobile" pattern="[0-9]{10}">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label-custom">Choose your course (required)</label>
+                    <select class="form-control-custom" name="course" required>
+                        <option value="">Choose your course!</option>
+                        <option value="Python Full Stack">Python Full Stack Development</option>
+                        <option value="Java Full Stack">Java Full Stack Development</option>
+                        <option value="MERN Stack">MERN Stack Development</option>
+                        <option value="Data Science">Data Science & ML</option>
+                        <option value="Cloud Computing">Cloud Computing</option>
+                        <option value="DevOps">DevOps Engineering</option>
+                        <option value="Cybersecurity">Cybersecurity</option>
+                        <option value="Networking">Networking CCNA/CCNP</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label-custom">Training Mode (required)</label>
+                    <div class="radio-group">
+                        <label class="radio-label"><input type="radio" name="training_mode" value="Live online" required> Live online</label>
+                        <label class="radio-label"><input type="radio" name="training_mode" value="Classroom" required> Classroom</label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label-custom">SCOPE INDIA Location (required)</label>
+                    <div class="radio-group">
+                        <label class="radio-label"><input type="radio" name="location" value="Technopark TVM" required> Technopark TVM</label>
+                        <label class="radio-label"><input type="radio" name="location" value="Thampanoor TVM" required> Thampanoor TVM</label>
+                        <label class="radio-label"><input type="radio" name="location" value="Kochi" required> Kochi</label>
+                        <label class="radio-label"><input type="radio" name="location" value="Nagercoil" required> Nagercoil</label>
+                        <label class="radio-label"><input type="radio" name="location" value="Online" required> Online</label>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label-custom">Preferred Training Timings (required)</label>
+                    <div class="row">
+                        <div class="col-md-3"><label class="checkbox-label"><input type="checkbox" name="preferred_timings" value="8am-10am"> Between 8am - 10am</label></div>
+                        <div class="col-md-3"><label class="checkbox-label"><input type="checkbox" name="preferred_timings" value="9am-1pm"> Between 9am - 1pm</label></div>
+                        <div class="col-md-3"><label class="checkbox-label"><input type="checkbox" name="preferred_timings" value="1pm-6pm"> Between 1pm - 6pm</label></div>
+                        <div class="col-md-3"><label class="checkbox-label"><input type="checkbox" name="preferred_timings" value="6pm-10pm"> Between 6pm - 10pm</label></div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label-custom">Address</label>
+                    <textarea class="form-control-custom" name="address" rows="2"></textarea>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label-custom">Country</label>
+                    <input type="text" class="form-control-custom" name="country">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label-custom">State</label>
+                    <input type="text" class="form-control-custom" name="state">
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label-custom">City</label>
+                    <input type="text" class="form-control-custom" name="city">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label-custom">PIN/Zip Code</label>
+                    <input type="text" class="form-control-custom" name="pin_code">
+                </div>
+
+                <div class="col-12 text-center mt-5">
+                    <button type="submit" class="btn-submit">Complete Registration >></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}
